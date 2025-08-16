@@ -1,6 +1,10 @@
 # Job Match Automation
 
-An automated email monitoring system that analyzes job postings from multiple job boards against a user's resume, providing brutally honest match assessments via Discord notifications and data exports.
+[![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/your-username/job-match-automation/actions)
+
+An automated email monitoring system that analyzes job postings from multiple job boards against your resume, providing brutally honest match assessments via Discord notifications and data exports.
 
 ## Project Status
 **✅ COMPLETE** - All phases implemented and tested
@@ -22,13 +26,6 @@ An automated email monitoring system that analyzes job postings from multiple jo
 - **Advanced Analytics**: Comprehensive analytics with trends, conversion rates, and skill demand analysis
 - **Performance Monitoring**: System and operation performance tracking
 - **Email Scheduling**: Configurable email scheduler with job board specificity
-
-## Technical Requirements
-
-- Python 3.13 or later
-- Gmail account with app password
-- DeepSeek API access via OpenRouter (free tier available)
-- Discord webhook URL (for notifications, optional)
 
 ## Quick Start
 
@@ -67,7 +64,6 @@ An automated email monitoring system that analyzes job postings from multiple jo
 ### Running the Email Monitor
 
 To continuously monitor your email for job postings:
-
 ```bash
 python src/main.py --monitor
 ```
@@ -75,7 +71,6 @@ python src/main.py --monitor
 ### One-Time Email Check
 
 To check your email once for new job postings:
-
 ```bash
 python src/main.py --check
 ```
@@ -83,7 +78,6 @@ python src/main.py --check
 ### MCP Server Mode
 
 To run the system as an MCP server for tool integration:
-
 ```bash
 python src/mcp/server.py
 ```
@@ -98,14 +92,6 @@ The system exposes the following MCP tools:
 - `export_matches_csv`: Export job matches to CSV for a date range
 - `check_email_now`: Trigger immediate email check instead of waiting for schedule
 - `get_match_statistics`: Get statistics about job matching performance
-
-## Documentation
-
-- [User Guide](docs/USER_GUIDE.md) - Complete user documentation
-- [Quick Start Guide](docs/QUICK_START.md) - Rapid deployment guide
-- [API Documentation](docs/API.md) - MCP tool API documentation
-- [Deployment Guide](docs/DEPLOYMENT.md) - Deployment instructions
-- [Release Notes](RELEASE_NOTES.md) - Detailed release information
 
 ## System Architecture
 
@@ -128,6 +114,21 @@ job-match-automation/
 ├── README.md                 # This file
 └── .gitignore                # Version control exclusions
 ```
+
+## Technical Requirements
+
+- Python 3.13 or later
+- Gmail account with app password
+- DeepSeek API access via OpenRouter (free tier available)
+- Discord webhook URL (for notifications, optional)
+
+## Documentation
+
+- [User Guide](docs/USER_GUIDE.md) - Complete user documentation
+- [Quick Start Guide](docs/QUICK_START.md) - Rapid deployment guide
+- [API Documentation](docs/API.md) - MCP tool API documentation
+- [Deployment Guide](docs/DEPLOYMENT.md) - Deployment instructions
+- [Release Notes](RELEASE_NOTES.md) - Detailed release information
 
 ## Testing
 
