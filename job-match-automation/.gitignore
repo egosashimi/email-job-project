@@ -1,0 +1,8 @@
+# Job Match Automation
+
+job-match-automation/
+venv/
+*.pyc
+__pycache__/
+.env
+*.enc
