@@ -1,0 +1,44 @@
+# Job Match Automation - CI/CD Workflow
+
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.13
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install -r requirements-dev.txt
+
+    - name: Run linting
+      run: |
+        flake8 src/ --max-line-length=100
+        black --check src/
+
+    - name: Run unit tests
+      env:
+        OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY_TEST }}
+      run: |
+        python test_runner.py
+
+    - name: Run integration tests
+      if: github.event_name == 'push'
+      run: |
+        echo "Integration tests would run here"
+
+    - name: Upload coverage
+      uses: codecov/codecov-action@v1
+      with:
+        file: ./coverage.xml

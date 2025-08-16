@@ -1,0 +1,29 @@
+John Doe
+New York, NY
+john.doe@email.com
+
+SUMMARY
+Experienced Python and JavaScript developer with 2 years of professional experience.
+Skilled in AI-assisted development and full-stack applications.
+
+SKILLS
+Python, JavaScript, React, Node.js, Django, Flask, SQL, PostgreSQL, Git, Docker
+
+EXPERIENCE
+Software Developer, TechCorp
+2022 - Present
+- Developed Python applications using Django and Flask
+- Created responsive web interfaces with React
+- Implemented RESTful APIs with Node.js
+
+Junior Developer, StartupXYZ
+2021 - 2022
+- Worked on JavaScript projects using React and Node.js
+- Collaborated with senior developers on Python backend services
+
+EDUCATION
+Bachelor of Science in Computer Science
+University of New York, 2021
+
+SALARY EXPECTATIONS
+$70,000 - $85,000

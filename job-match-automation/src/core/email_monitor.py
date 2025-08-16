@@ -9,7 +9,13 @@ from typing import List, Dict, Optional
 from datetime import datetime, timedelta
 import re
 import logging
-from src.core.config_manager import config
+import sys
+import os
+
+# Add the src directory to the path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+from core.config_manager import config
 
 
 class EmailMonitor:

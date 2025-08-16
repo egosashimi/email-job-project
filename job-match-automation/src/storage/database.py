@@ -7,7 +7,13 @@ import sqlite3
 import os
 from typing import List, Dict, Optional
 from datetime import datetime
-from src.core.config_manager import config
+import sys
+import os
+
+# Add the src directory to the path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+from core.config_manager import config
 
 
 class DatabaseManager:
